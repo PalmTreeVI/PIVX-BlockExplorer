@@ -36,10 +36,12 @@
                     <td>Size (bytes)</td>
                     <td class="data">{{$b.Size}}</td>
                 </tr>
+                {{- if $b.Nonce -}}
                 <tr>
-                    <td>Difficulty</td>
-                    <td class="data ellipsis">{{$b.Difficulty}}</td>
+                    <td>Nonce</td>
+                    <td class="data ellipsis">{{$b.Nonce}}</td>
                 </tr>
+                {{end}}
             </tbody>
         </table>
     </div>
@@ -63,8 +65,8 @@
                     <td class="data ellipsis">{{$b.Bits}}</td>
                 </tr>
                 <tr>
-                    <td>Nonce</td>
-                    <td class="data ellipsis">{{$b.Nonce}}</td>
+                    <td>Difficulty</td>
+                    <td class="data ellipsis">{{$b.Difficulty}}</td>
                 </tr>
             </tbody>
         </table>

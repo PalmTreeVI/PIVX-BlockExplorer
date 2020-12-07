@@ -15,7 +15,7 @@
         <table class="table data-table">
             <tbody>
                 <tr>
-                    <td style="width: 30%;">Last Indexed Block</td>
+                    <td style="width: 40%;">Last Indexed Block</td>
                     <td class="data">
                         {{- if .InternalExplorer -}}
                             <a href="/block/{{$bb.BestHeight}}">{{$bb.BestHeight}}</a>
@@ -29,8 +29,8 @@
                     <td class="data ellipsis">{{$be.Bestblockhash}}</td>
                 </tr>
                 <tr>
-                    <td>Mempool Size</td>
-                    <td class="data">{{$bb.MempoolSize}}</td>
+                    <td>Last Block Update</td>
+                    <td class="data">{{formatTime $bb.LastBlockTime}}</td>
                 </tr>
                 <tr>
                     <td>Protocol Version</td>
@@ -51,12 +51,12 @@
         <table class="table data-table">
             <tbody>
                 <tr>
-                    <td>Difficulty</td>
+                    <td style="width: 40%;">Difficulty</td>
                     <td class="data">{{$be.Difficulty}}</td>
                 </tr>
                 <tr>
-                    <td>Last Block Update</td>
-                    <td class="data">{{formatTime $bb.LastBlockTime}}</td>
+                    <td>Mempool Size</td>
+                    <td class="data">{{$bb.MempoolSize}}</td>
                 </tr>
                 <tr>
                     <td>Last Mempool Update</td>
